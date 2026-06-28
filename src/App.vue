@@ -1,11 +1,31 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="app">
+    <MapView />
+    <MarkerLayer />
+    <InfoPanel />
+    <TimelineBar />
+  </div>
 </template>
 
-<style scoped></style>
+<script setup>
+import MarkerLayer from './components/MarkerLayer.vue'
+import MapView     from './components/MapView.vue'
+import InfoPanel   from './components/InfoPanel.vue'
+import TimelineBar from './components/TimelineBar.vue'
+</script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
