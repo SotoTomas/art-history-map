@@ -8,6 +8,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  base:'/art-history-map/',
   server: {
     watch: {
       usePolling: true,
